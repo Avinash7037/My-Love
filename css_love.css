@@ -3,4 +3,22 @@ body {
     margin: 0;
     overflow: hidden;
     background-repeat: no-repeat;
-  }
+    width: 100vw; /* Set body to full viewport width */
+    height: 100vh; /* Set body to full viewport height */
+}
+
+@media (max-width: 768px) {
+    body {
+        /* Adjustments for devices with width less than or equal to 768px */
+        background-size: cover; /* Ensures the background scales properly */
+        overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        /* Adjustments for devices with width less than or equal to 480px */
+        padding: 10px; /* Add padding for better visibility on small screens */
+        font-size: 14px; /* Adjust font size if text is included */
+    }
+}
